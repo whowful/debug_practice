@@ -51,7 +51,7 @@ const users = [
 function findUserWithoutUsernameKey(users) {
     const usersWithoutUserName = [];
     for (const user of users) {
-        if (!user["username"]) {
+        if (!Object.hasOwn(user, "username")) {
             usersWithoutUserName.push(user);
         }
     }

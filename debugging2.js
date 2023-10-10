@@ -15,7 +15,7 @@ function collectArraysWithZeros(data) {
     const filteredNumbers = [];
     for (const numbers of data) {
         for (const number of numbers) {
-            if (number === 0) {
+            if (number === 0 && !filteredNumbers.includes(numbers)) {
                 filteredNumbers.push(numbers);
             }
         }
